@@ -1,5 +1,5 @@
 :root {
-  --white: #f5f5f5;
+  --white: #ffffff;
   --black: #5d5d5d;
 }
 
@@ -83,20 +83,61 @@ div > ul.navLinks {
 /* Grid Section */
 
 .galleryParent{
-    width: 100%;
-    height: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .galleryGrid{
-    width: 95%;
-    height: auto;
-    margin: auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
+    flex: 25%;
+    max-width: 25%;
+    flex-wrap: wrap;
 }
 
-.imageItem{
+.galleryGrid img{
     width: 100%;
-    height: auto;
-    margin-bottom: auto;
+    vertical-align: middle;
+}
+
+
+/* About Page */
+
+.aboutSectionParent{
+    width: 90%;
+    margin: 90px auto  30px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.authorImageContainer{
+    max-width: 50%;
+}
+
+.aboutText{
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutAuthor{
+    font-family: "Source Code Pro", monospace;
+} 
+
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.contacts > a{
+    color: var(--black);
+    margin-bottom: 16px;
+    text-decoration: underline;
+}
+
+.contact_socials{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
 }
