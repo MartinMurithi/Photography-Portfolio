@@ -7,7 +7,7 @@ body {
   font-family: sans-serif;
   color: var(--black);
   background-color: var(--white);
-  /* font-family: 'Source Code Pro', monospace; */
+  font-family: "Source Code Pro", monospace;
 }
 
 ul > li {
@@ -21,6 +21,7 @@ a {
 nav {
   /* background-color: red; */
   width: 95%;
+  height: 70px;
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
@@ -44,12 +45,54 @@ div > ul.navLinks {
 .navLinkItem {
   color: var(--black);
   font-family: "Source Code Pro", monospace;
-  padding-bottom: .1rem;
+  padding-bottom: 0.1rem;
 }
 
-.navLinkItem[aria-current="page"]{
-    border-bottom: 3px solid var(--black);
+.navLinkItem[aria-current="page"] {
+  border-bottom: 3px solid var(--black);
 }
+
+/* Mobile nav */
+.mobileNavListContainer {
+  width: 100%;
+  height: auto;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: relative;
+  background-color: var(--white);
+  /* background-color: green; */
+  top: 89px;
+  right: 131px;
+  z-index: 1;
+  margin: auto;
+  padding: 0 5px;
+}
+
+.mobileNavList li {
+  height: 100%;
+  width: 100%;
+  margin: 6px 0;
+}
+
+.mobileNavLinkItem a {
+  width: 100%;
+  display: block;
+  color: var(--black);
+  padding: 10px 0;
+  font-size: .9rem;
+}
+
+hr {
+  color: var(--black);
+  opacity: 0.4;
+}
+
+#menuIcon,
+#xIcon{
+  display: none;
+}
+
 
 /* => Pseudo element, styles specific part of an element */
 
@@ -71,9 +114,7 @@ div > ul.navLinks {
   right: auto;
 } */
 
-
-
-.socialIcons {
+.siconocialIcons {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,62 +123,178 @@ div > ul.navLinks {
 
 /* Grid Section */
 
-.galleryParent{
-    display: flex;
-    flex-wrap: wrap;
+.galleryParent {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.galleryGrid{
-    flex: 25%;
-    max-width: 25%;
-    flex-wrap: wrap;
+.galleryGrid {
+  columns: 3 auto;
+  column-gap: 5px;
 }
 
-.galleryGrid img{
-    width: 100%;
-    vertical-align: middle;
+.galleryGrid img {
+  width: 100%;
+  padding-bottom: 5px;
 }
-
 
 /* About Page */
 
-.aboutSectionParent{
-    width: 90%;
-    margin: 90px auto  30px auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
+.aboutSectionParent {
+  width: 90%;
+  margin: 90px auto 30px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
 }
 
-.authorImageContainer{
+.authorImageContainer {
+  max-width: 50%;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutAuthor {
+  font-family: "Source Code Pro", monospace;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contacts > a {
+  color: var(--black);
+  margin-bottom: 16px;
+  text-decoration: underline;
+}
+
+.contact_socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+/* Inquiry Page */
+
+.inquirySection {
+  width: 95%;
+  margin: 120px auto 30px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.leftSide {
+  font-family: "Source Code Pro", monospace;
+  width: 40%;
+}
+
+.leftSideText {
+  font-size: 0.9rem;
+}
+
+.inquiryContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.inquiryEmail,
+.inquiryMobile {
+  padding: 4px 0px;
+  color: var(--black);
+  width: fit-content;
+}
+
+.inquiryForm {
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formNames {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+input,
+textarea,
+button {
+  width: 70%;
+  border-radius: 3px;
+  outline: transparent;
+  border: 1px solid var(--black);
+}
+
+input {
+  padding: 10px 0px;
+}
+
+button {
+  width: fit-content;
+  padding: 6px 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  .aboutSectionParent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .authorImageContainer {
     max-width: 50%;
+  }
 }
 
-.aboutText{
+@media only screen and (max-width: 950px) {
+  .linkPages,
+  .socialIcons {
+    display: none;
+  }
+
+  #menuIcon{
+    display: block;
+  }
+
+  #xIcon{
+    display: none;
+  }
+
+
+  .aboutSectionParent {
     display: flex;
+    /* flex-direction: column; */
+  }
+
+  .authorImageContainer {
+    max-width: 100%;
+  }
+
+  .inquirySection {
+    margin-top: 20px;
     flex-direction: column;
-}
+    gap: 50px;
+  }
 
-.aboutAuthor{
-    font-family: "Source Code Pro", monospace;
-} 
-
-
-.contacts{
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.contacts > a{
-    color: var(--black);
-    margin-bottom: 16px;
-    text-decoration: underline;
-}
-
-.contact_socials{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 5px;
+  .leftSide,
+  .inquiryForm {
+    width: 100%;
+  }
 }
