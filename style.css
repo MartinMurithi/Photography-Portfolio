@@ -20,7 +20,7 @@ a {
 
 nav {
   /* background-color: red; */
-  width: 95%;
+  width: 98%;
   height: 70px;
   margin: 20px auto;
   display: flex;
@@ -36,6 +36,7 @@ nav {
 }
 
 div > ul.navLinks {
+  /* background-color: greenyellow; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,7 +53,15 @@ div > ul.navLinks {
   border-bottom: 3px solid var(--black);
 }
 
+.socialIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
 /* Mobile nav */
+
 .mobileNavListContainer {
   width: 100%;
   height: auto;
@@ -60,8 +69,7 @@ div > ul.navLinks {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   position: relative;
-  background-color: var(--white);
-  /* background-color: green; */
+  background-color: var(--white); 
   top: 89px;
   right: 131px;
   z-index: 1;
@@ -86,6 +94,10 @@ div > ul.navLinks {
 hr {
   color: var(--black);
   opacity: 0.4;
+}
+
+.menuIconContainer{
+  display: none;
 }
 
 #menuIcon,
@@ -114,18 +126,15 @@ hr {
   right: auto;
 } */
 
-.siconocialIcons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
+
 
 /* Grid Section */
 
 .galleryParent {
   display: flex;
   flex-wrap: wrap;
+  width: 98%;
+  margin: 0 auto;
 }
 
 .galleryGrid {
@@ -135,26 +144,35 @@ hr {
 
 .galleryGrid img {
   width: 100%;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
 }
 
 /* About Page */
 
 .aboutSectionParent {
-  width: 90%;
+  width: 98%;
   margin: 90px auto 30px auto;
   display: flex;
   justify-content: space-between;
   gap: 50px;
 }
 
-.authorImageContainer {
+/* .authorImageContainer {
   max-width: 50%;
+} */
+
+.aboutTitleContainer{
+  width: 40%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.3rem;
+  text-align: center;
+  font-weight: 800;
 }
 
 .aboutText {
   display: flex;
   flex-direction: column;
+  width: 60%;
 }
 
 .aboutAuthor {
@@ -183,7 +201,7 @@ hr {
 /* Inquiry Page */
 
 .inquirySection {
-  width: 95%;
+  width: 98%;
   margin: 120px auto 30px auto;
   display: flex;
   justify-content: space-between;
@@ -192,7 +210,7 @@ hr {
 
 .leftSide {
   font-family: "Source Code Pro", monospace;
-  width: 40%;
+  width: 45%;
 }
 
 .leftSideText {
@@ -202,7 +220,7 @@ hr {
 .inquiryContacts {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  /* gap: 5px; */
   margin-bottom: 14px;
 }
 
@@ -230,7 +248,8 @@ form {
 }
 
 label {
-  font-size: 0.9rem;
+  font-size: .9rem;
+  margin-top: 12px;
 }
 
 input,
@@ -252,14 +271,30 @@ button {
   cursor: pointer;
 }
 
+@media only screen and (max-width:550px) {
+  .galleryGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .galleryGrid img{
+    display: block;
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 750px) {
-  .aboutSectionParent {
-    display: flex;
-    flex-direction: column;
+  .aboutText{
+    margin-top: -80px;
+    font-size: .9rem;
   }
 
   .authorImageContainer {
-    max-width: 50%;
+    display: none;
+  }
+
+  .galleryGrid{
+    columns: 2 auto;
   }
 }
 
@@ -267,6 +302,10 @@ button {
   .linkPages,
   .socialIcons {
     display: none;
+  }
+
+  .menuIconContainer{
+    display: block;
   }
 
   #menuIcon{
@@ -277,14 +316,26 @@ button {
     display: none;
   }
 
+  .galleryGrid{
+    columns: 2 auto;
+  }
 
   .aboutSectionParent {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
+    margin-top: auto;
   }
 
-  .authorImageContainer {
-    max-width: 100%;
+  .aboutTitleContainer {
+    width: 100%;
+    text-align: start;
+    font-size: 1.5rem;
+    margin-top: -30px;
+  }
+
+  .aboutText{
+    width: 100%;
+    margin-top: -80px;
   }
 
   .inquirySection {
