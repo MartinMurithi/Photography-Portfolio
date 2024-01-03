@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script defer src="./index.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,8 +12,152 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Roy Wangui - Gallery</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <nav>
+      <!-- Logo Container -->
+      <div class="logoContainer">
+        <a href="./Home.html" class="logoText">ROY WANGUI</a>
+      </div>
+
+      <!-- Link pages -->
+      <div class="linkPages">
+        <ul class="navLinks">
+          <li><a href="./Home.html" class="navLinkItem">Work</a></li>
+          <li><a href="./About.html" class="navLinkItem">About</a></li>
+          <li><a href="./Inquiry.html" class="navLinkItem">Inquiry</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="socialIcons">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img
+            src="./Assets/Icons/icons8-instagram-50.png"
+            alt="Instagram Icon"
+            class="socialIcon"
+            width="20px"
+            height="20px"
+          />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img
+            src="./Assets/Icons/icons8-pinterest-50.png"
+            alt="Pinterest Icon"
+            class="socialIcon"
+            width="20px"
+            height="20px"
+          />
+        </a>
+        <a href="http://" target="_blank" rel="noopener noreferrer"
+          ><img
+            src="./Assets/Icons/icons8-whatsapp-50.png"
+            alt="Whatsapp Icon"
+            class="socialIcon"
+            width="20px"
+            height="20px"
+        /></a>
+      </div>
+
+      <!-- For small devices below 760px -->
+      <div class="mobileNavListContainer" id="mobileNavListContainer">
+        <ul class="mobileNavList">
+          <li class="mobileNavLinkItem"><a href="./Home.html">Home</a></li>
+          <hr />
+          <li class="mobileNavLinkItem">
+            <a href="./About.html">About</a>
+          </li>
+          <hr />
+          <li class="mobileNavLinkItem">
+            <a href="./Inquiry.html">Contact</a>
+          </li>
+          <hr />
+        </ul>
+      </div>
+      <div class="menuIconContainer">
+        <img
+          src="./Assets/Icons/icons8-menu-50.png"
+          alt="Menu Icon"
+          width="25px"
+          height="25px"
+          loading="lazy"
+          id="menuIcon"
+        />
+        <img
+          src="./Assets/Icons/icons8-x-48.png"
+          alt="X icon"
+          width="25px"
+          height="25px"
+          loading="lazy"
+          id="xIcon"
+        />
+      </div>
+    </nav>
+
+    <div class="inquirySection">
+      <section class="leftSide">
+        <p class="leftSideText">
+          Looking to discuss a project ? Please get in touch using the form on
+          this page. Generally, I'm able to reply to all inquiries within 48
+          hours.
+        </p>
+        <div class="inquiryContacts">
+          <a href="mailto:" class="inquiryEmail">wanguiroy@gmail.com</a>
+          <a href="tel:+" class="inquiryMobile">+254 768402381</a>
+        </div>
+        <div class="contact_socials">
+          <a>
+            <img
+              src="./Assets/Icons/icons8-instagram-50.png"
+              alt="Instagram Icon"
+              class="socialIcon"
+              width="20px"
+              height="20px"
+            />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img
+              src="./Assets/Icons/icons8-pinterest-50.png"
+              alt="Pinterest Icon"
+              class="socialIcon"
+              width="20px"
+              height="20px"
+            />
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer"
+            ><img
+              src="./Assets/Icons/icons8-whatsapp-50.png"
+              alt="Whatsapp Icon"
+              class="socialIcon"
+              width="20px"
+              height="20px"
+          /></a>
+        </div>
+      </section>
+
+      <div class="inquiryForm">
+        <form action="">
+          <div class="formNameParent">
+            <div class="formNames">
+              <label for="firstName" class="nameLabel"
+                >First Name <span>(required)</span>
+              </label>
+              <input type="text" required id="firstName" />
+            </div>
+            <div class="formNames">
+              <label for="lastName">Last Name <span>(required)</span></label>
+              <input type="text" required id="lastName" />
+            </div>
+          </div>
+
+          <label for="email">Email <span>(required)</span></label>
+          <input type="email" name="email" id="email" />
+
+          <label for="message">Message <span>(required)</span></label>
+          <textarea name="message" id="message" cols="30" rows="6"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
