@@ -320,6 +320,15 @@ button {
     columns: 2 auto;
   }
 
+
+  .blurredImg img{
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    /* display: block; */
+    object-position: center;
+    object-fit: cover;
+  }
+
   .aboutSectionParent {
     display: flex;
     flex-direction: column;

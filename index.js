@@ -15,12 +15,6 @@ function checkActiveLink() {
 
 const mobileNav = document.getElementById("mobileNavListContainer");
 
-// scrollContainer.addEventListener('wheel', (e) => {
-//     e.preventDefault();
-//     scrollContainer.style.scrollBehavior = 'smooth';
-//     scrollContainer.scrollLeft += e.deltaY;
-// });
-
 menuIcon.addEventListener("click", () => {
   mobileNav.style.display = "block";
   menuIcon.style.display = "none";
