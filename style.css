@@ -106,28 +106,6 @@ hr {
 }
 
 
-/* => Pseudo element, styles specific part of an element */
-
-/* .navLinkItem::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  height: 3px;
-  border-radius: 20%;
-  background-color: var(--black);
-  transition: width 0.25s ease-in-out;
-}
-
-.navLinkItem:hover::before {
-  width: 100%;
-  left: 0;
-  right: auto;
-} */
-
-
-
 /* Grid Section */
 
 .galleryParent {
@@ -142,9 +120,27 @@ hr {
   column-gap: 5px;
 }
 
-.galleryGrid img {
-  width: 100%;
+.blurredImg{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 5px;
+  height: auto;
+}
+
+
+.blurredImg > img {
+  max-width: 100%;
   padding-bottom: 3px;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+/* Load images smoothly */
+.blurredImg.loaded > img{
+  opacity: 1;
 }
 
 /* About Page */
@@ -156,10 +152,6 @@ hr {
   justify-content: space-between;
   gap: 50px;
 }
-
-/* .authorImageContainer {
-  max-width: 50%;
-} */
 
 .aboutTitleContainer{
   width: 40%;
@@ -318,15 +310,6 @@ button {
 
   .galleryGrid{
     columns: 2 auto;
-  }
-
-
-  .blurredImg img{
-    max-width: 100%;
-    aspect-ratio: 1/1;
-    /* display: block; */
-    object-position: center;
-    object-fit: cover;
   }
 
   .aboutSectionParent {
