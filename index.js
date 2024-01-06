@@ -43,7 +43,6 @@ blurryDivs.forEach((blurryDiv)=>{
 
   function loadImg(){
     blurryDiv.classList.add("loaded");
-    
   }
 
   if(img.complete){
