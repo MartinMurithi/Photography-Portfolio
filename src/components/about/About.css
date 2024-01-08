@@ -1,0 +1,68 @@
+.aboutSectionParent {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+.aboutSection {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.aboutImageParent{
+  width: 50%;
+  height: 50%;
+}
+
+.aboutTextContainer {
+  width: 50%;
+}
+
+h4.aboutMeTitle{
+    font-size: 1.5rem;
+    margin: 15px 0px 8px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.aboutMeText{
+    color: #5d5d5d;
+    font-size: .9rem;
+    line-height: 25px;
+    margin: 0px 0px 30px;
+    font-weight: 400;
+}
+
+.contactsContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.mobile{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile > a{
+  color: black;
+  font-size: .9rem;
+}
+
+.contactBtn{
+    background-color: #172f47;
+    color: white;
+    font-size: .9rem;
+    outline: transparent;
+    cursor: pointer;
+    padding: 12px 24px;
+}

@@ -1,0 +1,42 @@
+.galleryPreview {
+  /* background-color: red; */
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3.latestWork {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+.imgGrid {
+  width: 98%;
+  margin: 40px auto 10px auto;
+  columns: 3 auto;
+  column-gap: 8px;
+}
+
+.imgGrid > img {
+  padding-bottom: 6px;
+}
+
+button.viewMoreBtn {
+  width: 99%;
+  background-color: transparent;
+  color: black;
+  margin: 40px 0 10px 0;
+  padding: 15px 40px;
+  cursor: pointer;
+  outline: transparent;
+  border: 1px solid black;
+  transition: background-color 300ms ease-in-out;
+}
+
+button.viewMoreBtn:hover {
+  background-color: transparent;
+  color: black;
+}
