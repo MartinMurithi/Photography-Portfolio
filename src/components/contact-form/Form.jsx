@@ -32,7 +32,7 @@ function Form() {
         </div>
       </div>
 
-      <div class="form-container">
+      <div className="form-container">
         <form action="#" method="post">
           <div class="formNames">
             <div className="firstName">

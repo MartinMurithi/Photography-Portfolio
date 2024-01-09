@@ -6,7 +6,7 @@ function About() {
       <div className="aboutSection">
         <div className="aboutImageParent">
           <img
-            src="/assets/about-image.jpg"
+            src="/assets/about-image.webp"
             alt="About Author"
             width="100%"
             height="auto"

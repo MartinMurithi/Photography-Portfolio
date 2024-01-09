@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import imageList from "../../Images";
 import "./GalleryPreview.css";
+import LazyImage from "../LazyImage";
 
 function GalleryPreview() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ function GalleryPreview() {
         {imageList?.slice(0, 10)?.map((img, index) => {
           return (
             <div key={index}>
-              <img src={img.path} alt={img.alt} width="100%" height="auto" className="imgItem" />
+              <LazyImage src={img.path} alt={img.alt} />
             </div>
           );
         })}
