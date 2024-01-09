@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Navbar from "../components/navbar/Navbar";
+import Form from '../components/contact-form/Form';
 
 function Contact() {
   return (
-    <div>
-      Let's connect. Fill out our form and let me know which service you are
-      interested in and I'll be in touch asap regarding your inquiry.{" "}
-    </div>
+    <>
+    <Navbar/>
+    <Form/>
+    </>
   );
 }
 

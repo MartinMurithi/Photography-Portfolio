@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Prociono&family=Satisfy&display=swap");
+
+.formSection {
+  /* background-color: red; */
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactFormTitle {
+  font-family: "lora", serif;
+  color: #4f504d;
+  font-size: 3rem;
+  font-weight: 300;
+  text-decoration: none solid rgb(79, 80, 77);
+  margin-top: 40px;
+}
+
+.contactText {
+  color: #4f504d;
+  font-family: "lora", serif;
+  font-size: 1.1rem;
+  line-height: 30px;
+  letter-spacing: 1px;
+  width: 55%;
+  margin: 40px auto 10px auto;
+}
+
+.contactsInquiry {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.mobileInquiry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobileInquiry > a {
+  color: #4f504d;
+}
+.form-container {
+  max-width: 55%;
+  margin: 70px auto 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.formNames {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.name-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "lora", serif;
+  text-align: start;
+  color: #4f504d;
+  font-size: 0.9rem;
+}
+
+#first-name,
+#last-name,
+#mobile,
+#email {
+  padding: 12px 2px;
+  width: 300px;
+  outline: transparent;
+  font-family: "lora", serif;
+  border: none;
+  background-color: #dbdbdb;
+}
+
+#first-name:focus,
+#last-name:focus,
+#mobile:focus,
+#email:focus {
+  background-color: transparent;
+  border: 1px solid #4f504d;
+}
+
+.message {
+  margin-top: 30px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 4px;
+  box-sizing: border-box;
+  border-style: none;
+  outline: transparent;
+  font-family: "lora", serif;
+  background-color: #dbdbdb;
+}
+
+textarea:focus{
+    border: 1px solid #4f504d;
+}
+
+input[type="submit"] {
+  background-color: transparent;
+  color: #4f504d;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 10px 0;
+}
