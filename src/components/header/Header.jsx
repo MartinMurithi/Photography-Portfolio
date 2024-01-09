@@ -1,15 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./Header.css";
 import Navbar from '../navbar/Navbar';
 
 function Header() {
+  const navigate = useNavigate();
   return (
     <header>
       <Navbar/>
       <div className="headerText">
                 <h2 className='headerText1'>Hello! I'm Roy Wangui</h2>
         <p className='headerText2'>A freelance photographer from Nairobi, Kenya</p>
-        <button className="viewGallery">View Gallery</button>
+        <button className="viewGallery" onClick={()=>navigate("/gallery")}>View Gallery</button>
       </div>
 
     </header>

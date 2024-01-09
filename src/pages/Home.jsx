@@ -1,7 +1,7 @@
 import React from "react";
 import About from "../components/about/About";
 import Footer from "../components/footer/Footer";
-import GalleryPreview from "../components/gallery-overview/GalleryPreview";
+import GalleryPreview from "../components/gallery-preview/GalleryPreview";
 import Header from "../../src/components/header/Header";
 
 function Home() {

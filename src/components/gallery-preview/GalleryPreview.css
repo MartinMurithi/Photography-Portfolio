@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Prociono&family=Satisfy&display=swap");
+
 .galleryPreview {
-  /* background-color: red; */
   margin-top: 150px;
   display: flex;
   flex-direction: column;
@@ -9,19 +10,19 @@
 
 h3.latestWork {
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Lora", serif;
   font-size: 2rem;
 }
 
 .imgGrid {
   width: 98%;
-  margin: 40px auto 10px auto;
+  margin: 60px auto 10px auto;
   columns: 3 auto;
-  column-gap: 8px;
+  column-gap: 12px;
 }
 
-.imgGrid > img {
-  padding-bottom: 6px;
+.imgItem {
+  margin-bottom: 12px;
 }
 
 button.viewMoreBtn {
@@ -39,4 +40,14 @@ button.viewMoreBtn {
 button.viewMoreBtn:hover {
   background-color: transparent;
   color: black;
+}
+
+.galleryText {
+  text-align: center;
+  margin: 50px 0px;
+  color: #4f504d;
+  font-weight: 400;
+  font-size: 3rem;
+  text-decoration: none solid rgb(79, 80, 77);
+  font-family: "Satisfy", cursive;
 }
