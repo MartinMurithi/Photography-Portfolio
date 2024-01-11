@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import imageList from "../../Images";
+import imageList from "../../data/Images";
 import "./GalleryPreview.css";
 import LazyImage from "../LazyImage";
 
@@ -14,12 +14,19 @@ function GalleryPreview() {
         {imageList?.slice(0, 10)?.map((img, index) => {
           return (
             <div key={index}>
-              <LazyImage src={img.path} alt={img.alt} />
+              <LazyImage
+                src={img.path}
+                alt={img.alt}
+                imagesList={imageList}
+                placeholder={img.placeholder}
+              />
             </div>
           );
         })}
       </div>
-      <button className="viewMoreBtn" onClick={()=>navigate("/gallery")}>View More</button>
+      <button className="viewMoreBtn" onClick={() => navigate("/gallery")}>
+        View More
+      </button>
     </div>
   );
 }

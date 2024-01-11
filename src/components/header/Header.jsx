@@ -1,21 +1,24 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
-import Navbar from '../navbar/Navbar';
+import Navbar from "../navbar/Navbar";
 
 function Header() {
   const navigate = useNavigate();
   return (
     <header>
-      <Navbar/>
+      <Navbar />
       <div className="headerText">
-                <h2 className='headerText1'>Hello! I'm Roy Wangui</h2>
-        <p className='headerText2'>A freelance photographer from Nairobi, Kenya</p>
-        <button className="viewGallery" onClick={()=>navigate("/gallery")}>View Gallery</button>
+        <h2 className="headerText1">Hello! I'm Roy Wangui</h2>
+        <p className="headerText2">
+          A freelance photographer from Nairobi, Kenya
+        </p>
+        <button className="viewGallery" onClick={() => navigate("/gallery")}>
+          Explore Gallery
+        </button>
       </div>
-
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
