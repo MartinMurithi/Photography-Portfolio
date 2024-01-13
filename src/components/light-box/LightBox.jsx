@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./LightBox.css";
 
-function LightBox({ children, show, onClose }) {
+function LightBox({ onClose, src, alt }) {
   return (
-    <>
-      {show && (
-        <div className="modalBackdrop" onClick={onClose}>
-          <div className={`modalWrapper${show ? "active" : ""}`}>
-            <div onClick={onClose} className="onCloseBtn">X</div>
-            <div className="modalBody">{children}</div>
-          </div>
+    <div className="lightBoxBackdrop">        <div className="closeBtn" onClick={onClose}>
+          X
         </div>
-      )}
-    </>
+      <div className="lightBox">
+
+          <div className="modalContent">
+            <img
+              src={src}
+              alt={alt}
+              width="100%"
+              height="auto"
+              className="lightBoxImg"
+            />
+        </div>
+      </div>
+    </div>
   );
 }
 

@@ -23,6 +23,7 @@ h3.latestWork {
 
 .imgItem {
   margin-bottom: 12px;
+  cursor: pointer;
 }
 
 button.viewMoreBtn {

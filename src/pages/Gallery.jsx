@@ -6,26 +6,52 @@ import "../components/gallery-preview/GalleryPreview.css";
 import LightBox from "../components/light-box/LightBox";
 
 function Gallery() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [clickedImgPath, setClickedImgPath] = useState("");
+
+  const onHandleOpenDialog = (index) => {
+    setIsDialogOpen(true);
+    setClickedImgPath(imageList[index].path);
+    console.log(clickedImgPath);
+  };
+
+  const onHandleCloseDialog = () => {
+    setIsDialogOpen(false);
+  };
+
   return (
     <div>
       <Navbar />
       <h2 className="galleryText">Explore the gallery</h2>
 
-      <div className="imgGrid" style={{ marginTop: "20px", width: "98%" }}>
+      <div
+        className="imgGrid"
+        style={{
+          display: isDialogOpen ? "none" : "block",
+          marginTop: "20px",
+          width: "98%",
+        }}
+      >
         {imageList?.map((img, index) => {
           return (
-            <div key={index}>
+            <div key={index} onClick={() => onHandleOpenDialog(index)}>
               <LazyImage
                 src={img.path}
                 alt={img.alt}
                 imagesList={imageList}
                 placeholder={img.placeholder}
-                index={index}
               />
             </div>
           );
         })}
       </div>
+      {isDialogOpen && (
+        <LightBox
+          onClose={onHandleCloseDialog}
+          src={clickedImgPath}
+          alt={clickedImgPath}
+        />
+      )}
     </div>
   );
 }

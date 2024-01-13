@@ -1,12 +1,39 @@
-.modalBackdrop{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);
-    top: 0;
-    left: 0;
+.lightBoxBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.modalWrapper{
-    
+.lightBox {
+  width: 70%;
+  padding: 10px;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #dedede;
+}
+
+.modalContent {
+  text-align: center;
+}
+
+.lightBoxImg {
+  max-width: 90%;
+  max-height: 90vh;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  aspect-ratio: 1;
 }

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import LightBox from "../components/light-box/LightBox";
 
 function LazyImage({ src, alt, placeholder, index }) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -9,6 +10,17 @@ function LazyImage({ src, alt, placeholder, index }) {
     };
     img.src = src;
   }, [src]);
+
+  //  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  //  const onHandleOpenDialog = (index) => {
+  //    setIsDialogOpen(true);
+  //    console.log(index);
+  //  };
+
+  //  const onHandleCloseDialog = () => {
+  //    setIsDialogOpen(false);
+  //  };
   return (
     <>
 
@@ -20,6 +32,7 @@ function LazyImage({ src, alt, placeholder, index }) {
           height="auto"
           className="imgItem"
           loading="lazy"
+          // onClick={()=>onHandleOpenDialog(index)}
         />
       ) : (
         <img
@@ -31,6 +44,7 @@ function LazyImage({ src, alt, placeholder, index }) {
           loading="lazy"
         />
       )}
+      {/* {isDialogOpen && <LightBox onClose={onHandleCloseDialog} />} */}
     </>
   );
 }
