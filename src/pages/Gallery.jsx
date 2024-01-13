@@ -34,8 +34,7 @@ function Gallery() {
 
   useEffect(() => {
     setClickedImgPath(imageList[imgIndex]?.path);
-    console.log(imgIndex);
-  }, [imgIndex, imageList]);
+  }, [imgIndex]);
 
   return (
     <div>

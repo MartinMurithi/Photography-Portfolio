@@ -34,13 +34,13 @@ function Form() {
 
       <div className="form-container">
         <form action="#" method="post">
-          <div class="formNames">
+          <div className="formNames">
             <div className="firstName">
               <label htmlFor="first-name">First Name</label>
               <input type="text" id="first-name" name="first_name" required />
             </div>
 
-            <div class="lastName">
+            <div className="lastName">
               <label htmlFor="last-name">Last Name</label>
               <input type="text" id="last-name" name="last_name" required />
             </div>
@@ -58,12 +58,12 @@ function Form() {
           </div>
 
 
-          <div class="message">
+          <div className="message">
             <label htmlFor="message">Message</label>
             <textarea id="message" name="message" rows="7" required></textarea>
           </div>
 
-          <div class="submitBtn">
+          <div className="submitBtn">
             <input type="submit" value="Submit" />
           </div>
         </form>

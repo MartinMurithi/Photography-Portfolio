@@ -35,8 +35,7 @@ function GalleryPreview() {
 
   useEffect(() => {
     setClickedImgPath(imageList[imgIndex]?.path);
-    console.log(imgIndex);
-  }, [imgIndex, imageList]);
+  }, [imgIndex]);
   return (
     <div className="galleryPreview">
       <h3 className="latestWork">My Latest Work</h3>

@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./About.css";
 function About() {
+  const navigate = useNavigate();
+
   return (
     <div className="aboutSectionParent">
       <div className="aboutSection">
@@ -50,7 +53,7 @@ function About() {
               <a href="mailto:roywanguip@gmail.com">roywanguip@gmail.com</a>
             </div>
           </div>
-          <button className="contactBtn">GET IN TOUCH</button>
+          <button className="contactBtn" onClick={()=>navigate("contact")}>GET IN TOUCH</button>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Prociono&family=Satisfy&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Prociono&family=Satisfy&display=swap");
 
 .aboutSectionParent {
   background-color: #f5f5f5;
@@ -17,55 +17,123 @@
   gap: 30px;
 }
 
-.aboutImageParent{
+.aboutImageParent {
   width: 50%;
   height: 50%;
 }
 
 .aboutTextContainer {
   width: 50%;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 
-h4.aboutMeTitle{
-    font-size: 1.5rem;
-    margin: 15px 0px 8px;
-    font-weight: 600;
-    font-family: 'Lora', serif;
-
+h4.aboutMeTitle {
+  font-size: 1.5rem;
+  margin: 15px 0px 8px;
+  font-weight: 600;
+  font-family: "Lora", serif;
 }
 
-.aboutMeText{
-    color: #5d5d5d;
-    font-size: .9rem;
-    line-height: 25px;
-    margin: 0px 0px 30px;
+.aboutMeText {
+  color: #5d5d5d;
+  font-size: 0.9rem;
+  line-height: 25px;
+  margin: 0px 0px 30px;
 }
 
-.contactsContainer{
+.contactsContainer {
   display: flex;
   flex-direction: column;
   gap: 14px;
   margin-bottom: 20px;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 
-.mobile{
+.mobile {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.mobile > a{
+.mobile > a {
   color: black;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
-.contactBtn{
-    color: black;
-    outline: transparent;
-    cursor: pointer;
-    padding: 7px 15px;
-    font-size: .75rem;
-    font-family: 'Lora', serif;
+.contactBtn {
+  color: black;
+  outline: transparent;
+  cursor: pointer;
+  padding: 7px 15px;
+  font-size: 0.75rem;
+  font-family: "Lora", serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutSectionParent {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+  }
+
+  .aboutSection{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutImageParent{
+    display: none;
+  }
+  .aboutTextContainer{
+    width: 100%;
+    text-align: center;
+  }
+
+  .aboutMeText{
+    line-height: 27px;
+  }
+
+  div.contactsContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contactBtn{
+    margin-top: 10px;
+  }
+
+}
+
+@media only screen and (max-width:1010px){
+  .aboutSection{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutImageParent{
+    width: 100%;
+    display: none;
+  }
+
+  .aboutTextContainer{
+    width: 100%;
+    text-align: center;
+  }
+
+  .contactsContainer{
+    flex-direction: row;
+        justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+}
+
+@media only screen and (min-width:1300px){
+  .aboutText{
+    font-size: 1.2rem;
+  }
 }
