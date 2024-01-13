@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/navbar/Navbar";
 import imageList from "../data/Images";
 import LazyImage from "../components/LazyImage";
@@ -8,16 +8,34 @@ import LightBox from "../components/light-box/LightBox";
 function Gallery() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [clickedImgPath, setClickedImgPath] = useState("");
+  const [imgIndex, setImgIndex] = useState(0);
 
   const onHandleOpenDialog = (index) => {
     setIsDialogOpen(true);
     setClickedImgPath(imageList[index].path);
-    console.log(clickedImgPath);
+    setImgIndex(index);
   };
 
   const onHandleCloseDialog = () => {
     setIsDialogOpen(false);
   };
+
+  const handleNextImage = () => {
+    if (imgIndex < imageList.length - 1) {
+      setImgIndex((imgIndex) => imgIndex + 1);
+    }
+  };
+
+  const handlePrevImg = () => {
+    if (imgIndex > 0) {
+      setImgIndex((imgIndex) => imgIndex - 1);
+    }
+  };
+
+  useEffect(() => {
+    setClickedImgPath(imageList[imgIndex]?.path);
+    console.log(imgIndex);
+  }, [imgIndex, imageList]);
 
   return (
     <div>
@@ -50,6 +68,8 @@ function Gallery() {
           onClose={onHandleCloseDialog}
           src={clickedImgPath}
           alt={clickedImgPath}
+          onClickPrev={handlePrevImg}
+          onClickNext={handleNextImage}
         />
       )}
     </div>
