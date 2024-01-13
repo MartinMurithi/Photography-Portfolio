@@ -7,8 +7,8 @@ import LightBox from "../components/light-box/LightBox";
 
 function Gallery() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [clickedImgPath, setClickedImgPath] = useState("");
-  const [imgIndex, setImgIndex] = useState(0);
+  const [clickedImgPath, setClickedImgPath] = useState(null);
+  const [imgIndex, setImgIndex] = useState(null);
 
   const onHandleOpenDialog = (index) => {
     setIsDialogOpen(true);
@@ -70,6 +70,8 @@ function Gallery() {
           alt={clickedImgPath}
           onClickPrev={handlePrevImg}
           onClickNext={handleNextImage}
+          currentImgIndex={imgIndex + 1}
+          totalImages={imageList.length}
         />
       )}
     </div>

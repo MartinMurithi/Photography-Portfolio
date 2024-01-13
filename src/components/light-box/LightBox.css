@@ -28,6 +28,17 @@
   color: #dedede;
 }
 
+.imageCounter{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    z-index: 888;
+    color: #dedede;
+   font-family: "lora", serif;
+   font-size: 1.2rem;
+   font-weight: 600;
+}
+
 .modalContent {
   text-align: center;
 }
@@ -54,4 +65,5 @@
 .prevBtn,
 .nextBtn {
   cursor: pointer;
+  margin: 0 auto;
 }

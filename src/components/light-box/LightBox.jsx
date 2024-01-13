@@ -1,9 +1,19 @@
 import React from "react";
 import "./LightBox.css";
 
-function LightBox({ onClose, src, alt , onClickNext, onClickPrev}) {
+function LightBox({
+  onClose,
+  src,
+  alt,
+  onClickNext,
+  onClickPrev,
+  currentImgIndex,
+  totalImages,
+}) {
   return (
     <div className="lightBoxBackdrop">
+      <p className="imageCounter">{currentImgIndex + "/" + totalImages}</p>
+
       <div className="closeBtn" onClick={onClose}>
         X
       </div>
