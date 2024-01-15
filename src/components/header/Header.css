@@ -40,3 +40,36 @@ button.viewGallery{
     outline: transparent;
     border-radius: 5px;
 }
+
+@media only screen and (max-width:768px){
+.headerText {
+  width: 90%;
+}
+
+h2.headerText1 {
+    /* width: 100%; */
+    font-size: 2.3rem;
+    line-height: 70px;
+    text-align: center;
+}
+
+p.headerText2 {
+    text-align: center;
+    line-height: 30px;
+}
+
+button.viewGallery{
+    background-color: transparent;
+    color: white;
+    font-family: 'Lora', serif;
+    margin-top: 25px;
+    padding: 13px 25px;
+    cursor: pointer;
+    outline: transparent;
+    border-radius: 5px;
+}
+}
+
+@media only screen and (max-width:1010px){
+  
+}
