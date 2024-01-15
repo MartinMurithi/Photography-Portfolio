@@ -47,9 +47,8 @@ button.viewGallery{
 }
 
 h2.headerText1 {
-    /* width: 100%; */
     font-size: 2.3rem;
-    line-height: 70px;
+    line-height: 50px;
     text-align: center;
 }
 
