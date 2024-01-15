@@ -43,7 +43,7 @@
 .mobileInquiry > a {
   color: #4f504d;
 }
-
+/* 
 .form-container {
   width: 55%;
   margin: 70px auto 20px auto;
@@ -99,20 +99,118 @@ label {
 .message {
   margin-top: 30px;
 }
+ */
 
-textarea {
-  width: 100%;
-  margin-top: 8px;
-  padding: 4px;
-  box-sizing: border-box;
-  border-style: none;
-  outline: transparent;
-  font-family: "lora", serif;
-  background-color: #dbdbdb;
+.formSectionParent {
+  height: 100vh;
+  margin: 70px 0px 20px 0px;
+  display: flex;
 }
 
-textarea:focus{
+.formQuoteSection {
+  width: 90%;
+  margin: auto;
+  /* background-color: rebeccapurple; */
+}
+
+.formParent {
+  width: 65%;
+  margin: auto;
+}
+
+.form {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+
+
+
+
+.inputParents {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.leftSide,
+.rightSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+label{
+    font-family: "lora", serif;
+    text-align: start;
+    color: #4f504d;
+    font-size: .9rem;
+    display: block !important;
+    width: 100%;
+}
+input.formInput {
+  width: 100%;
+display: block !important;
+  padding: 12px;
+  box-sizing: border-box;
+    outline: transparent;
+    font-family: "lora", serif;
+    border: none;
+    background-color: #dbdbdb;
+    margin-top: 12px;
+  }
+  
+input.formInput:focus {
+    background-color: transparent;
+      border: 1px solid #4f504d;
+}
+
+input.formInput::placeholder {
+  padding-left: 10px;
+}
+
+textarea.formInput {
+    padding: 12px;
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    box-sizing: border-box;
+    border-style: none;
+    outline: transparent;
+    font-family: "lora", serif;
+    background-color: #dbdbdb;
+}
+
+textarea.formInput:focus {
+    background-color: transparent;
     border: 1px solid #4f504d;
+}
+
+textarea.formInput::placeholder {
+  padding-left: 10px;
+}
+
+.formBtn {
+  background-color: var(--red);
+  font-size: 0.9rem;
+  padding: 16px 30px;
+  font-weight: 400;
+  color: var(--white);
+  outline: transparent;
+  border-style: none;
+  border-radius: 3px;
+  width: 40%;
+  margin: auto;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.formQuoteBtn:hover {
+  background-color: var(--black);
 }
 
 input[type="submit"] {

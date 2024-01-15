@@ -32,7 +32,7 @@ function Form() {
         </div>
       </div>
 
-      <div className="form-container">
+      {/* <div className="form-container">
         <form action="#" method="post">
           <div className="formNames">
             <div className="firstName">
@@ -67,7 +67,66 @@ function Form() {
             <input type="submit" value="Submit" />
           </div>
         </form>
-      </div>
+      </div> */}
+
+ <div class="formSectionParent" id="contactForm">
+      <section class="formQuoteSection">
+        <div class="formParent">
+          <form action="" class="form">
+            {/* <!-- Left Side --> */}
+            <div class="inputParents">
+              <div class="leftSide">
+                <label htmlFor="name">Names<input
+                  type="text"
+                  placeholder="John Doe"
+                  id="name"
+                  class="formInput"
+                /></label>              
+                
+               <label htmlFor="mobile">Mobile                <input
+                  type="tel"
+                  placeholder="+254 798 278 356"
+                  class="formInput"
+                  id="mobile"
+                /></label>
+
+                
+
+              </div>
+              {/* <!-- Right Side --> */}
+              <div class="rightSide">
+                <label htmlFor="email">Email                 <input
+                  type="email"
+                  id="email"
+                  placeholder="johndoe@gmail.com"
+                  class="formInput"
+                /></label>
+
+<label htmlFor="subject">Subject                <input
+                  type="text"
+                  placeholder="Subject"
+                  class="formInput"
+                  id="subject"
+                /></label>
+
+   
+              </div>
+              <label htmlFor="message">Message              <textarea
+                name="message"
+                id="Message"
+                cols="30"
+                rows="9"
+                placeholder="Your Message"
+                class="formInput"
+              ></textarea></label>
+
+              <button type="button" class="formBtn">Send</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
     </div>
   );
 }
