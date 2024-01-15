@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Prociono&family=Satisfy&display=swap");
 
-.formSection {
+.formSectionPage {
   width: 90%;
   height: auto;
   margin: 0 auto;
@@ -43,63 +43,6 @@
 .mobileInquiry > a {
   color: #4f504d;
 }
-/* 
-.form-container {
-  width: 55%;
-  margin: 70px auto 20px auto;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.formNames {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.name-email {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-family: "lora", serif;
-  text-align: start;
-  color: #4f504d;
-  font-size: 0.9rem;
-}
-
-#first-name,
-#last-name,
-#mobile,
-#email {
-  padding: 12px 2px;
-  width: 300px;
-  outline: transparent;
-  font-family: "lora", serif;
-  border: none;
-  background-color: #dbdbdb;
-}
-
-#first-name:focus,
-#last-name:focus,
-#mobile:focus,
-#email:focus {
-  background-color: transparent;
-  border: 1px solid #4f504d;
-}
-
-.message {
-  margin-top: 30px;
-}
- */
 
 .formSectionParent {
   height: 100vh;
@@ -107,26 +50,20 @@ label {
   display: flex;
 }
 
-.formQuoteSection {
+.formSection {
   width: 90%;
   margin: auto;
-  /* background-color: rebeccapurple; */
 }
 
 .formParent {
-  width: 65%;
+  width: 70%;
   margin: auto;
 }
 
 .form {
   width: 100%;
   margin: auto;
-  text-align: center;
 }
-
-
-
-
 
 .inputParents {
   width: 90%;
@@ -195,35 +132,31 @@ textarea.formInput::placeholder {
 }
 
 .formBtn {
-  background-color: var(--red);
+  background-color: transparent;
   font-size: 0.9rem;
   padding: 16px 30px;
   font-weight: 400;
   color: var(--white);
   outline: transparent;
-  border-style: none;
+  border: 1px solid #4f504d;
   border-radius: 3px;
-  width: 40%;
+  width: 100%;
   margin: auto;
   cursor: pointer;
   transition: background-color 1s;
 }
 
-.formQuoteBtn:hover {
-  background-color: var(--black);
+.formBtn:hover {
+  background-color: #000000;
+  color: whitesmoke;
 }
 
-input[type="submit"] {
-  background-color: transparent;
-  color: #4f504d;
-  width: 100%;
-  cursor: pointer;
-  margin-top: 30px;
-  padding: 10px 0;
-  outline: transparent;
-}
 
 @media only screen and (max-width:768px){
+
+  .formSectionPage{
+    width: 100%;
+  }
   .contactFormTitle {
   font-size: 2rem;
   margin-top: 20px;
@@ -241,6 +174,32 @@ input[type="submit"] {
   flex-direction: column;
   gap: 20px;
 }
+
+.formSectionParent{
+  width: 100%;
+}
+
+.formSection {
+  width: 100%;
+}
+
+.formParent {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+}
+
+.inputParents {
+  width: 100%;
+  margin: auto;
+}
+.leftSide,
+.rightSide {
+  flex-direction: column;
+}
+
 }
 
 @media only screen and (max-width:1010px){
@@ -249,4 +208,23 @@ input[type="submit"] {
   width: 90%;
   margin: 40px auto 10px auto;
 }
+
+.formSectionParent {
+  height: auto;
+  margin: 100px 0px 20px 0px;
+}
+
+.formParent {
+  width: 90%;
+}
+
+.inputParents {
+  width: 90%;
+}
+
+.leftSide,
+.rightSide {
+  gap: 30px;
+} 
+
 }

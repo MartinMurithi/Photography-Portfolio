@@ -1,9 +1,46 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Form.css";
 
 function Form() {
+  const [user, setUser] = useState({
+    name:"",
+    mobile:"",
+    email:"",
+    subject:"",
+    message:""
+  });
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_b39cy22",
+        "template_n5tav9n",
+        form.current,
+        "qX1VIBx3eqaB-FU2P"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("Email Sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+      setUser({
+        name:"",
+        mobile:"",
+        email:"",
+        subject:"",
+        message:""
+      })
+  };
   return (
-    <div className="formSection">
+    <div className="formSectionPage">
       <h4 className="contactFormTitle">Get In Touch</h4>
       <p className="contactText">
         Let's connect. Fill out our form and let me know which service you are
@@ -69,64 +106,102 @@ function Form() {
         </form>
       </div> */}
 
- <div class="formSectionParent" id="contactForm">
-      <section class="formQuoteSection">
-        <div class="formParent">
-          <form action="" class="form">
-            {/* <!-- Left Side --> */}
-            <div class="inputParents">
-              <div class="leftSide">
-                <label htmlFor="name">Names<input
-                  type="text"
-                  placeholder="John Doe"
-                  id="name"
-                  class="formInput"
-                /></label>              
-                
-               <label htmlFor="mobile">Mobile                <input
-                  type="tel"
-                  placeholder="+254 798 278 356"
-                  class="formInput"
-                  id="mobile"
-                /></label>
+      <div className="formSectionParent" id="contactForm">
+        <section className="formSection">
+          <div className="formParent">
+            <form className="form" ref={form} onSubmit={sendEmail}>
+              {/* <!-- Left Side --> */}
+              <div className="inputParents">
+                <div className="leftSide">
+                  <label htmlFor="name">
+                    Names
+                    <input
+                      type="text"
+                      placeholder="John Doe"
+                      id="name"
+                      name="name"
+                      required
+                      value={user.name}
+                      onChange={(e) =>
+                        setUser({ ...user, name: e.target.value })
+                      }
+                      className="formInput"
+                    />
+                  </label>
 
-                
+                  <label htmlFor="mobile">
+                    Mobile
+                    <input
+                      type="tel"
+                      placeholder="+254 798 278 356"
+                      className="formInput"
+                      name="mobile"
+                      id="mobile"
+                      required
+                      value={user.mobile}
+                      onChange={(e) =>
+                        setUser({ ...user, mobile: e.target.value })
+                      }
+                    />
+                  </label>
+                </div>
+                {/* <!-- Right Side --> */}
+                <div className="rightSide">
+                  <label htmlFor="email">
+                    Email
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={user.email}
+                      onChange={(e) =>
+                        setUser({ ...user, email: e.target.value })
+                      }
+                      placeholder="johndoe@gmail.com"
+                      className="formInput"
+                    />
+                  </label>
 
+                  <label htmlFor="subject">
+                    Subject
+                    <input
+                      type="text"
+                      placeholder="Subject"
+                      className="formInput"
+                      id="subject"
+                      name="subject"
+                      value={user.subject}
+                      onChange={(e) =>
+                        setUser({ ...user, subject: e.target.value })
+                      }
+                      required
+                    />
+                  </label>
+                </div>
+                <label htmlFor="message">
+                  Message
+                  <textarea
+                    name="message"
+                    id="Message"
+                    cols="30"
+                    rows="10"
+                    required
+                    value={user.message}
+                    onChange={(e) => setUser({ ...user, message: e.target.value })}
+                    placeholder="Your Message"
+                    className="formInput"
+                  ></textarea>
+                </label>
+
+                <button type="submit" className="formBtn">
+                  Send
+                </button>
               </div>
-              {/* <!-- Right Side --> */}
-              <div class="rightSide">
-                <label htmlFor="email">Email                 <input
-                  type="email"
-                  id="email"
-                  placeholder="johndoe@gmail.com"
-                  class="formInput"
-                /></label>
-
-<label htmlFor="subject">Subject                <input
-                  type="text"
-                  placeholder="Subject"
-                  class="formInput"
-                  id="subject"
-                /></label>
-
-   
-              </div>
-              <label htmlFor="message">Message              <textarea
-                name="message"
-                id="Message"
-                cols="30"
-                rows="9"
-                placeholder="Your Message"
-                class="formInput"
-              ></textarea></label>
-
-              <button type="button" class="formBtn">Send</button>
-            </div>
-          </form>
-        </div>
-      </section>
-    </div>
-
+            </form>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
