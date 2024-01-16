@@ -16,7 +16,11 @@
   width: 70%;
   padding: 10px;
   position: relative;
+}
 
+.counter-closeBtn{
+  display: flex;justify-content: space-between;
+  align-items: center;
 }
 
 .closeBtn {
@@ -26,17 +30,18 @@
   cursor: pointer;
   font-size: 2rem;
   color: #dedede;
+  z-index: 888;
 }
 
-.imageCounter{
-    position: absolute;
-    top: 30px;
-    left: 50px;
-    z-index: 888;
-    color: #dedede;
-   font-family: "lora", serif;
-   font-size: 1.2rem;
-   font-weight: 600;
+.imageCounter {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  z-index: 888;
+  color: #dedede;
+  font-family: "lora", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .modalContent {
@@ -50,7 +55,6 @@
   object-fit: contain;
   object-position: center;
   aspect-ratio: 1;
-
 }
 
 @keyframes slide {
@@ -66,4 +70,20 @@
 .nextBtn {
   cursor: pointer;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+ .lightBox {
+    width: 100%;
+    height: 80%;
+  }
+
+.lightBoxImg {
+    height: 100vh; /* 100% of the viewport height for mobile */
+  }
+
+  .prevBtn,
+  .nextBtn{
+    display: none;
+  }
 }

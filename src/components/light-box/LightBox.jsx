@@ -12,11 +12,12 @@ function LightBox({
 }) {
   return (
     <div className="lightBoxBackdrop">
-      <p className="imageCounter">{currentImgIndex + "/" + totalImages}</p>
+      <div className="counter-closeBtn">      <p className="imageCounter">{currentImgIndex + "/" + totalImages}</p>
 
       <div className="closeBtn" onClick={onClose}>
         X
       </div>
+</div>
 
       <img
         src="/assets/icons8-less-than-50.png"
