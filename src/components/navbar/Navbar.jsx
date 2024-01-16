@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import MobileNavBar from "./MobileNavBar";
 import "./Navbar.css";
 
 function Navbar() {
+  const [isMobileNavbarOpen, setIsMobileNavbarOpen] = useState(false);
+
   const [isLocationHome, setLocation] = useState("");
   const currentLocation = useLocation();
 
@@ -92,7 +95,7 @@ function Navbar() {
           <li className="navIcon">
             <a href="">
               <img
-                src = {
+                src={
                   isLocationHome
                     ? "/assets/icons8-whatsapp-50.png"
                     : "/assets/icons8-whatsapp-black-50.png"
@@ -104,7 +107,32 @@ function Navbar() {
             </a>
           </li>
         </ul>
+
+        {isMobileNavbarOpen ? (
+          <div
+            className="xIcon"
+            onClick={() => setIsMobileNavbarOpen(false)}
+            style={{ color: isLocationHome ? "white" : "#5e5f5e" }}
+          >
+            X
+          </div>
+        ) : (
+          <img
+            src={
+              isLocationHome
+                ? "/assets/icons8-fries-menu-48-white.png"
+                : "/assets/icons8-fries-menu-48-black.png"
+            }
+            alt="Menu Icon"
+            height="30px"
+            width="30px"
+            className="menuIcon"
+            onClick={() => setIsMobileNavbarOpen(true)}
+          />
+        )}
       </div>
+
+      {isMobileNavbarOpen && <MobileNavBar />}
     </nav>
   );
 }
