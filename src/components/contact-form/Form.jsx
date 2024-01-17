@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 import "./Form.css";
 
 function Form() {
@@ -24,11 +25,10 @@ function Form() {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          console.log("Email Sent");
+          toast.success("Email Sent Successfully");
         },
         (error) => {
-          console.log(error.text);
+          toast.error("An error ocurred!" + error);
         }
       );
       setUser({

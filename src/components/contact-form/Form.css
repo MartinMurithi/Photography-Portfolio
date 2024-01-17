@@ -146,8 +146,9 @@ textarea.formInput::placeholder {
 }
 
 .formBtn:hover {
-  background-color: #000000;
-  color: whitesmoke;
+  background-color: #dbdbdb;
+  color: #000000;
+  border-style: none;
 }
 
 @media only screen and (max-width: 768px) {
