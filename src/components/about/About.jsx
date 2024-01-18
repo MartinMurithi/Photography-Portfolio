@@ -24,7 +24,7 @@ function About() {
             "I am a nature enthusiast as well as a Photographer specializing in capturing the nuances of different environments and places in Kenya."
           </p>
 
-          <p className="aboutMeText">I have traveled</p>
+          <p className="aboutMeText">I have travelled with Hikes and Trails Kenya in most of my travel photos. Some of the best shots are sold as Art merch, feel free to check them out.</p>
 
           <div className="contactsContainer">
             <div className="mobile">
