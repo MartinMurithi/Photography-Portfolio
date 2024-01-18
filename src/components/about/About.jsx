@@ -21,16 +21,10 @@ function About() {
         <div className="aboutTextContainer">
           <h4 className="aboutMeTitle">About Me</h4>
           <p className="aboutMeText">
-            "Capturing the vibrant essence of Nairobi, Kenya, I am a passionate
-            photographer dedicated to framing the beauty of moments in this
-            dynamic city. With a keen eye for detail and the artistic touch of
-            Adobe's powerful suite, I leverage cutting-edge technology to bring
-            stories to life through my lens. From composition to
-            post-processing, my work reflects the seamless fusion of traditional
-            photography skills with the latest digital tools, ensuring each
-            image tells a compelling tale of culture, diversity, and the rich
-            tapestry of life in Nairobi."
+            "I am a nature enthusiast as well as a Photographer specializing in capturing the nuances of different environments and places in Kenya."
           </p>
+
+          <p className="aboutMeText">I have traveled</p>
 
           <div className="contactsContainer">
             <div className="mobile">
