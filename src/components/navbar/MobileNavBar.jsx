@@ -24,7 +24,11 @@ function MobileNavBar() {
 
       <ul className="mobileNavIcons">
         <li className="navIcon">
-          <a href="https://www.instagram.com/roy_wangui">
+          <a
+            href="https://www.instagram.com/roy_wangui"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="/assets/icons8-instagram-black-50.png"
               alt="Instagram Icon"
@@ -34,17 +38,15 @@ function MobileNavBar() {
           </a>
         </li>
         <li className="navIcon">
-          <a href="" target="_blank">
-            <img
-              src="/assets/icons8-twitterx-black-50.png"
-              alt="X Icon"
-              height="20px"
-              width="20px"
-            />
-          </a>
+          <img
+            src="/assets/icons8-twitterx-black-50.png"
+            alt="X Icon"
+            height="20px"
+            width="20px"
+          />
         </li>
         <li className="navIcon">
-          <a href="https://wa.me/254768402381" target="_parent">
+          <a href="https://wa.me/254768402381" target="_blank" rel="noreferrer">
             <img
               src="/assets/icons8-whatsapp-black-50.png"
               alt="Whatsapp Icon"

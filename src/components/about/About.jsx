@@ -21,8 +21,12 @@ function About() {
         <div className="aboutTextContainer">
           <h4 className="aboutMeTitle">About Me</h4>
           <p className="aboutMeText">
-            "I am a nature enthusiast as well as a Photographer specializing in capturing the nuances of different environments and places in Kenya.
-          I have travelled with Hikes and Trails Kenya in most of my travel photos. Some of the best shots are sold as Art merch, feel free to check them out."</p>
+            "I am a nature enthusiast as well as a Photographer specializing in
+            capturing the nuances of different environments and places in Kenya.
+            I have travelled with Hikes and Trails Kenya in most of my travel
+            photos. Some of the best shots are sold as Art merch, feel free to
+            check them out."
+          </p>
 
           <div className="contactsContainer">
             <div className="mobile">
@@ -45,7 +49,9 @@ function About() {
               <a href="mailto:roywanguip@gmail.com">roywanguip@gmail.com</a>
             </div>
           </div>
-          <button className="contactBtn" onClick={()=>navigate("contact")}>GET IN TOUCH</button>
+          <button className="contactBtn" onClick={() => navigate("contact")}>
+            GET IN TOUCH
+          </button>
         </div>
       </div>
     </div>

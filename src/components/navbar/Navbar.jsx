@@ -65,7 +65,11 @@ function Navbar() {
         </ul>
         <ul className="navSocialIcons">
           <li className="navIcon">
-            <a href="">
+            <a
+              href="https://www.instagram.com/roy_wangui"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={
                   isLocationHome
@@ -79,21 +83,23 @@ function Navbar() {
             </a>
           </li>
           <li className="navIcon">
-            <a href="">
-              <img
-                src={
-                  isLocationHome
-                    ? "/assets/icons8-twitterx-50.png"
-                    : "/assets/icons8-twitterx-black-50.png"
-                }
-                alt="X Icon"
-                height="20px"
-                width="20px"
-              />
-            </a>
+            <img
+              src={
+                isLocationHome
+                  ? "/assets/icons8-twitterx-50.png"
+                  : "/assets/icons8-twitterx-black-50.png"
+              }
+              alt="X Icon"
+              height="20px"
+              width="20px"
+            />
           </li>
           <li className="navIcon">
-            <a href="">
+            <a
+              href="https://wa.me/254759213019"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={
                   isLocationHome
