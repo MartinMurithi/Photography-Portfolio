@@ -46,7 +46,7 @@ function MobileNavBar() {
           />
         </li>
         <li className="navIcon">
-          <a href="https://wa.me/254759213019" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/254759213018" target="_blank" rel="noreferrer">
             <img
               src="/assets/icons8-whatsapp-black-50.png"
               alt="Whatsapp Icon"
